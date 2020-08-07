@@ -82,7 +82,7 @@ public class BatchConfiguration {
             ItemWriter<Person> writer) {
 
         return stepBuilderFactory.get("priceChange")
-                .<Person, Person>chunk(50)
+                .<Person, Person>chunk(100)
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
